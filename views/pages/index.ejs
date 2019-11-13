@@ -5,11 +5,15 @@
     <%- include('../../views/layout/header') %>
     <main>
       <h4>Books</h4>
+      <p>Book Count: <%= books.length %></p>
       <ul id="book-list">
         <% books.forEach(book => { %>
-          <li data-book-id="<%= book.id %>"></li>
+          <li data-book-id="<%= book.id %>">
+          </li>
         <% }) %>
       </ul>
+    </main>
+    <main>
     </main>
     <%- include('../../views/layout/footer') %>
   </body>
