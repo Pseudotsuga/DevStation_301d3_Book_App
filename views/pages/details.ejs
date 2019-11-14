@@ -4,21 +4,16 @@
   <body>
     <%- include('../../views/layout/header') %>
     <main>
-      <h4>Books</h4>
-      <ul id="book-list">
-        <% books.forEach(book => { %>
-          <li data-book-id="<%= book.id %>">
+      <h4>Details</h4>
+      <ul id="book-details">
             <img src="<%= book.image_url %>">
             <p>Title: <%= book.title %></p>
             <p>Author: <%= book.author %></p>
             <p>Description: <%= book.description %></p>
             <p>ISBN: <%= book.isbn %></p>
             <p>Bookshelf: <%= book.bookshelf %></p>
-            <a href="/books/<%= book.id %>"><button>View Details</button></a>
           </li>
-        <% }) %>
       </ul>
-      <h2> Total Books: <%= books.length %></h2>
     </main>
     <%- include('../../views/layout/footer') %>
   </body>
