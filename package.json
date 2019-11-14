@@ -5,14 +5,17 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "watch": "nodemon server.js"
+    "watch": "nodemon server.js",
+    "refresh": "psql books_app -f ~/devstation/301/labs/DevStation_301d3_Book_App/books.sql"
   },
   "keywords": [],
   "author": "Code Fellows, LLC",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "ejs": "^2.7.1",
     "express": "^4.17.1",
+    "pg": "^7.12.1",
     "superagent": "^5.1.0"
   }
 }
