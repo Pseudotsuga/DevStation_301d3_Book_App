@@ -85,7 +85,8 @@ function booksParamPlaceHolder(request, response){
     .then( result => {
       console.log(result);
       response.render('pages/details', {book: result.rows[0]})
-    });
+    })
+    .catch(error => console.error(error));
 }
 
 function handleError(error, response) {
